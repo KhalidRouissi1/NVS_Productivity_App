@@ -10,6 +10,8 @@
   },
   "private": true,
   "dependencies": {
+    "@types/mongoose": "^x.x.x",
+    "mongoose": "^x.x.x",
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.12",
     "@angular/common": "^16.2.0",

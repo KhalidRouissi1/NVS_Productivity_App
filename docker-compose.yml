@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.angular
+    ports:
+      - "8090:4200"  # Corrected to map Angular server port
+
+  json-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.jsonserver
+    ports:
+      - "3000"
+    depends_on:
+      - angular-app

@@ -63,6 +63,7 @@ export class RegisterComponent {
     this.authService.registerUser(postData as User).subscribe(
       response => {
         this.presentToast('Registration successful');
+        
         this.router.navigate(['/']);
       },
       err => {

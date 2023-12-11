@@ -1,0 +1,88 @@
+
+.timer {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #333;
+  }
+
+
+
+// !! spinner
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.example-card {
+  margin-bottom: 10px;
+  margin: auto;
+  width: 500px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+
+// !! button
+
+
+*{
+  margin: auto;
+}
+
+
+
+
+section {
+  display: table;
+  margin: auto;
+}
+
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+

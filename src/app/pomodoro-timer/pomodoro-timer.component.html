@@ -1,0 +1,54 @@
+
+<mat-card class="example-card">
+    <mat-card-content>
+      <section class="example-section">
+        <label class="example-margin" >Color:</label>
+        <mat-radio-group [(ngModel)]="color">
+          <mat-radio-button class="example-margin" value="primary">
+            Primary
+          </mat-radio-button>
+          <mat-radio-button class="example-margin" value="accent">
+            Accent
+          </mat-radio-button>
+          <mat-radio-button class="example-margin" value="warn">
+            Warn
+          </mat-radio-button>
+        </mat-radio-group>
+      </section>
+
+        <section class="example-section">
+          <label class="example-margin">Progress:</label>
+          <mat-slider class="example-margin">
+            <input
+              type="range"
+              [(ngModel)]="value"
+              matSliderThumb
+              min="1"
+              max="1200"
+              step="1"
+              [ngStyle]="{ 'background-color': getColor() }"
+              (ngModelChange)="timeChange($event)"/>
+          </mat-slider>
+        </section>
+    </mat-card-content>
+  <div class="timer">
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button (click)="restart()"  [color]="color">restart</button>
+        <button mat-raised-button (click)="workTime()"  [color]="color">  {{timeIsWork==true?"stop timer":"run timer"}}</button>
+    
+      </div>  
+  </section>
+    <h2>{{ formatTime() }}</h2>
+  </div>
+    <mat-card-content>
+      <mat-progress-spinner
+          placeholder="youcef"
+          class="example-margin"
+          [color]="color"
+          [mode]="mode"
+          [value]="progressPercentage">
+        </mat-progress-spinner>
+    </mat-card-content>
+  </mat-card>
+

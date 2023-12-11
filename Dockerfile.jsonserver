@@ -1,0 +1,17 @@
+# Use the official Node.js image as the base image
+FROM node:16.2
+
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Install json-server globally
+RUN npm install -g json-server
+
+# Copy your JSON data file (e.g., db.json) to the working directory
+COPY db.json .
+
+# Expose the port that json-server will run on
+EXPOSE 3000
+
+# Command to start json-server when the container starts
+CMD ["json-server", "--watch", "db.json", "--port", "3000"]

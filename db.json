@@ -2,17 +2,71 @@
   "tasks": [
     {
       "id": 1,
-      "description": "qsdsq",
+      "userId": 1,
+      "description": "Code Some Stuff",
+      "done": false,
+      "task": false,
+      "inProg": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "description": "Workout",
+      "done": false,
+      "task": false,
+      "inProg": true
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "description": "dqsdqsd",
       "done": true,
       "task": false,
       "inProg": false
     },
     {
-      "id": 2,
-      "description": "qsdsq",
+      "id": 4,
+      "userId": 3,
+      "description": "qsdqdsq",
+      "done": true,
+      "task": false,
+      "inProg": false
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "description": "sdsqdsqdsq",
       "done": false,
       "task": true,
       "inProg": false
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "description": "sqqsqs",
+      "done": false,
+      "task": true,
+      "inProg": false
+    }
+  ],
+  "users": [
+    {
+      "username": "Khaled",
+      "email": "khalidrouissi7@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "Ahmed",
+      "email": "ahmed2@gmail.com",
+      "password": "ahmed2@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "Youssef",
+      "email": "Youssef@Youssef.Youssef",
+      "password": "Youssef@Youssef.Youssef",
+      "id": 3
     }
   ]
 }

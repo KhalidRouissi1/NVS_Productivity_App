@@ -26,20 +26,19 @@ export class LoginComponent {
   }
   async presentToast(message: string) {
     this.snackBar.open(message, 'Close', {
-      duration: 2000,  // Adjust the duration as needed
-      horizontalPosition: 'center', // You can also use 'start', 'end', 'left', 'right'
-      verticalPosition: 'top' // You can also use 'bottom'
+      duration: 2000, 
+      horizontalPosition: 'center', 
+      verticalPosition: 'top' 
     });
   }
   onSubmit() {  
     const {email,password} = this.loginFrom.value;
     this.auth.getUserByEmail(email as string).subscribe(
       response=>{
-        if(response.length >0 && response[0].password ==password){
-          const userId = response[0].id; // Obtenez l'ID depuis la réponse
 
+        if(response.length >0 && response[0].password ==password){
           localStorage.setItem('email',email as string);  
-          localStorage.setItem('id',userId as string);  
+          localStorage.setItem('userId', response[0].id as string);
           this.router.navigate(['todo']);
         }else{
           this.presentToast('Email or Password is wrong');

@@ -10,7 +10,7 @@ export class NavbarComponent  {
 
   constructor(private router:Router){}
   userOut(): boolean {
-    return Object.keys(localStorage).length === 0;
+    return localStorage.getItem("email") === null;
   }
 
   logout() {

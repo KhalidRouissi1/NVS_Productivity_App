@@ -17,8 +17,14 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar'; 
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {ProgressSpinnerMode, MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatRadioButton, MatRadioModule} from '@angular/material/radio';
 import { RegisterComponent } from './register/register.component';
+import { PomodoroTimerComponent } from './pomodoro-timer/pomodoro-timer.component';
+import { BarsComponent } from './bars/bars.component';
+import { Erro404Component } from './erro404/erro404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +33,9 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    PomodoroTimerComponent,
+    BarsComponent,
+    Erro404Component,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +52,12 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    MatInputModule 
+    MatTabsModule,
+    MatCardModule,
+    MatSliderModule,
+    MatProgressSpinnerModule,
+    MatRadioModule
+    
     
   ],
   providers: [],
