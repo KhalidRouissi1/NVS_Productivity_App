@@ -1,0 +1,20 @@
+<mat-toolbar class="text-dark mb-2 shadow-sm" style="background-color: #fff;">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <a [routerLink]="['/']">
+          <img class="mb-0" style="width: 180px;" src="assets/logo.png"/>
+        </a>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <nav *ngIf="!userOut()">
+          <button mat-button class="btn btn-dark" (click)="logout()">Logout</button>
+        </nav>
+        <nav *ngIf="userOut()">
+          <button mat-button class="btn btn-outline-dark mx-2" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</button>
+          <button mat-button class="btn btn-dark" [routerLink]="['/register']">Register</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,54 @@
+<!-- register.component.html -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 d-flex flex-column align-items-center">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+            <mat-form-field class="mb-3" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter your username" formControlName="username">
+              <small *ngIf="getusernameControl()?.invalid && (getusernameControl()?.dirty || getusernameControl()?.touched)" class="block text-danger">
+                <div *ngIf="getusernameControl()?.errors?.['required']">Username is required</div>
+              </small>
+            </mat-form-field>
+
+            <mat-form-field class="mb-3" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Enter your email" formControlName="email">
+              <small *ngIf="getemailControl()?.invalid && (getemailControl()?.dirty || getemailControl()?.touched)" class="block text-danger">
+                <div *ngIf="getemailControl()?.errors?.['required']">Email is required</div>
+                <div *ngIf="getemailControl()?.errors?.['email']">Email should be valid</div>
+              </small>
+            </mat-form-field>
+
+            <mat-form-field class="mb-3" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" placeholder="Enter your password" formControlName="password">
+              <small *ngIf="getpasswordControl()?.invalid && (getpasswordControl()?.dirty || getpasswordControl()?.touched)" class="block text-danger">
+                <div *ngIf="getpasswordControl()?.errors?.['required']">Password is required</div>
+              </small>
+            </mat-form-field>
+            <mat-form-field class="mb-3" appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput type="password" placeholder="Enter your Confirm Password" formControlName="confirmPass">
+              <small *ngIf="getConfiPassword()?.invalid && (getConfiPassword()?.dirty || getConfiPassword()?.touched)" class="block text-danger">
+                <div *ngIf="getConfiPassword()?.errors?.['required']">Confirm password is required</div>
+              </small>
+            </mat-form-field>
+            <small *ngIf="registerForm.errors?.['passwordMissMatch'] && !getConfiPassword()?.invalid && !getpasswordControl()?.invalid" class="block text-danger">
+              Passwords should match
+            </small>
+            <button mat-raised-button color="primary" type="submit">Register</button>
+            <a [routerLink]="['/login']" routerLinkActive="router-link-active">
+              Already Have an account?
+            </a>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
