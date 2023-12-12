@@ -1,4 +1,5 @@
 # NVS_Productivity_App
+![logo of the product](https://media.discordapp.net/attachments/1119946465779929230/1184022839637065728/logo.png?ex=658a7633&is=65780133&hm=a84f1edb01817ddaae27ec1afd4c0d70b03c6ecd4215164eb31722baddc4338d&=&format=webp&quality=lossless&width=1439&height=272)
 ## Overview
 
 Briefly describe your Angular app, including its purpose, main features, and target audience.
