@@ -45,7 +45,7 @@ ng serve
 ```
 Visit http://localhost:4200/ in your web browser to access the app.
 
-###Docker
+##Docker
 If you prefer Docker, follow these steps.
 #Docker
 ##Building Docker Image
@@ -60,8 +60,14 @@ Run your app in a Docker container.
 docker run -p 8090:80 my-angular-app
 ```
 Visit http://localhost:8090/ in your web browser to access the app.
+
 #Features
-Feel free to use my app to manage your tasks and get things done 
+After you make your loging 
+![todo app](https://media.discordapp.net/attachments/1119946465779929230/1184139555926982706/image.png?ex=658ae2e6&is=65786de6&hm=9b21f6e8cf5c5506e3a596324cd2003a23a154a4e2941ad9240e7c241238bc93&=&format=webp&quality=lossless&width=1377&height=671)
+
+Or you can use the pomodoro timer
+![timer app](https://media.discordapp.net/attachments/1119946465779929230/1184140172430942238/image.png?ex=658ae379&is=65786e79&hm=e6202ca2c5eb714bf4fade880fb742d18ff5d418c12c7d0feae4f4d6263f732c&=&format=webp&quality=lossless&width=1403&height=671)
+
 #License
 This project is licensed under the MIT License
 
